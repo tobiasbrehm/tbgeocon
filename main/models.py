@@ -35,9 +35,9 @@ class section(models.Model):
     img_alt = models.CharField(max_length=50, blank=True, null=True)
     text = models.TextField()
     text_de = models.TextField(blank=True)
-    sub_sections = models.ManyToManyField(sub_section, blank=True, null=True)   
-    logos = models.ManyToManyField(logo, blank=True, null=True)
+    sub_sections = models.ManyToManyField(sub_section, blank=True)   
+    logos = models.ManyToManyField(logo, blank=True)
 
     def __str__(self):
-        return self.title
-
+        return self.get_title_display()
+    
