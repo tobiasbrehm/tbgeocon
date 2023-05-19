@@ -31,7 +31,7 @@
         {% endfor %}
     </div>
     <div>
-        {% for sub_section in section.sub_sections %}
+        {% for sub_section in sections.sub_sections %}
         <div class="clip-container-right-arrow">
             <img class="clipping-box-right-arrow" src="{{sub_section.img.url}}" alt="{{sub_section.img_alt}}">
             <div class="clip-container-text">
@@ -42,5 +42,15 @@
         {% endfor %}
     </div>
     {% endfor %}
+    <div>
+        <h2>Kontaktformular</h2>
+        <form class="contact-form" method="post">
+            {% csrf_token %}
+            {{ form_de.as_p }}
+            <div>
+              <button class="send-button" type="submit">Send</button>
+            </div>
+          </form>  
+    </div>
 </div>
 {% endblock %}

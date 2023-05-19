@@ -9,10 +9,18 @@ class sub_section(models.Model):
     text = models.TextField()
     text_de = models.TextField(blank=True)
 
+    def __str__(self):
+        return self.title
+
+
+
 class logo(models.Model):
     title = models.CharField(max_length=50)  
     img = models.ImageField(upload_to='uploads')
     img_alt = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.title
 
 class section(models.Model):
     title = models.CharField(max_length=50)
@@ -22,4 +30,7 @@ class section(models.Model):
     text_de = models.TextField(blank=True)
     sub_sections = models.ForeignKey(sub_section, on_delete=models.CASCADE, blank=True, null=True)   
     logos = models.ForeignKey(logo, on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return self.title
 
