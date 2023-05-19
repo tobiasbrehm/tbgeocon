@@ -1,0 +1,226 @@
+Slideshowbilder Geology & Mining
+
+<div class="slideshow-container">
+    
+    <div class="mySlides1 fade">
+        <img src="../../media/public/geology_mining01.jpg">
+    </div>
+    
+    <div class="mySlides1 fade">
+        <img src="../../media/public/geology_mining02.jpg">
+    </div>
+    
+    <div class="mySlides1 fade">
+        <img src="../../media/public/geology_mining03.jpg">
+    </div>
+    
+    <div class="mySlides1 fade">
+        <img src="../../media/public/geology_mining04.jpg">
+    </div>
+    
+    <div class="mySlides1 fade">
+        <img src="../../media/public/geology_mining05.jpg">
+    </div>
+    
+    <div class="dot-positioning">
+        <span class="dot1"></span> 
+        <span class="dot1"></span> 
+        <span class="dot1"></span> 
+        <span class="dot1"></span> 
+        <span class="dot1"></span> 
+    </div>
+
+    <!-- Image Slideshow 1 Script -->
+    <script>
+        let slideIndex1 = 0;
+        showSlides1();
+        
+        function showSlides1() {
+            let i1;
+            let slides1 = document.getElementsByClassName("mySlides1");
+            let dots1 = document.getElementsByClassName("dot1");
+            for (i1 = 0; i1 < slides1.length; i1++) {
+            slides1[i1].style.display = "none";  
+            }
+            slideIndex1++;
+            if (slideIndex1 > slides1.length) {slideIndex1 = 1}    
+            for (i1 = 0; i1 < dots1.length; i1++) {
+            dots1[i1].className = dots1[i1].className.replace(" active", "");
+            }
+            slides1[slideIndex1-1].style.display = "block";  
+            dots1[slideIndex1-1].className += " active";
+            setTimeout(showSlides1, 5000); // Change image every 5 seconds
+        }
+        </script>
+    
+</div>
+
+
+
+Slideshowbilder Polar Expeditions
+
+<div class="slideshow-container">
+    <div class="mySlides2 fade">
+      <img src="../../media/public/expedition01.jpg">
+    </div>
+    
+    <div class="mySlides2 fade">
+      <img src="../../media/public/expedition02.jpg">
+    </div>
+    
+    <div class="mySlides2 fade">
+      <img src="../../media/public/expedition03.jpg">
+    </div>
+    
+    <div class="mySlides2 fade">
+      <img src="../../media/public/expedition04.jpg">
+    </div>
+    
+    <div class="mySlides2 fade">
+      <img src="../../media/public/expedition05.jpg">
+    </div>
+    
+    <div class="mySlides2 fade">
+      <img src="../../media/public/expedition06.jpg">
+    </div>
+    
+    <div class="dot-positioning">
+        <span class="dot2"></span> 
+        <span class="dot2"></span> 
+        <span class="dot2"></span> 
+        <span class="dot2"></span> 
+        <span class="dot2"></span> 
+        <span class="dot2"></span> 
+    </div>
+
+    <!-- Image Slideshow 1 Script -->
+    <script>
+        let slideIndex2 = 0;
+        showSlides2();
+        
+        function showSlides2() {
+            let i2;
+            let slides2 = document.getElementsByClassName("mySlides2");
+            let dots2 = document.getElementsByClassName("dot2");
+            for (i2 = 0; i2 < slides2.length; i2++) {
+            slides2[i2].style.display = "none";  
+            }
+            slideIndex2++;
+            if (slideIndex2 > slides2.length) {slideIndex2 = 1}    
+            for (i2 = 0; i2 < dots2.length; i2++) {
+            dots2[i2].className = dots2[i2].className.replace(" active", "");
+            }
+            slides2[slideIndex2-1].style.display = "block";  
+            dots2[slideIndex2-1].className += " active";
+            setTimeout(showSlides2, 5000); // Change image every 5 seconds
+        }
+        </script>
+    
+</div>
+
+
+
+
+
+CSS Slideshowbilder
+
+/* Image slideshows - START */
+
+.mySlides1, .mySlides2 {
+    display: none;
+    width: 300px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  vertical-align: top;
+  width:300px;
+  height: 320px;
+  margin-right: 2%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot-positioning {
+    position: relative;
+    text-align: center;
+}
+
+.dot1, .dot2 {
+  height: 7.5px;
+  width: 7.5px;
+  margin: 0 1px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 3.0s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* --- Image slideshows - END --- */
+
+
+/* erzwingt eingerückte Liste für Servicetext*/
+.services .Scriptcontent .tabs .content section .service-desc ul {
+    list-style-position: inside;
+}
+
+/* definiert die Bildgrösse der Service-Slideshow */
+.services .Scriptcontent .tabs .content .slideshow-container .mySlides1 img,
+.services .Scriptcontent .tabs .content .slideshow-container .mySlides2 img,
+.services .Scriptcontent .tabs .content .slideshow-container .mySlides3 img,
+.services .Scriptcontent .tabs .content .slideshow-container .mySlides4 img {
+    height:300px;
+    border-radius:1%;
+    margin-right:2%;
+}
+
+/* definiert die Bildgrösse der Service-Slideshow */
+.services .Scriptcontent .tabs .content .slideshow-container .mySlides1 img,
+.services .Scriptcontent .tabs .content .slideshow-container .mySlides2 img,
+.services .Scriptcontent .tabs .content .slideshow-container .mySlides3 img,
+.services .Scriptcontent .tabs .content .slideshow-container .mySlides4 img {
+    height:300px;
+    border-radius:1%;
+    margin-right:2%;
+}

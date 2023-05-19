@@ -1,0 +1,206 @@
+{% extends 'page.html' %}
+
+{% block title %}TB Geocon - Services{% endblock %}
+
+{% block services %}
+
+<!-- SERVICES SECTION - START -->
+<a id="services">
+    <div class="services">
+        
+        <div class="Scriptcontent">
+            
+            <!-- Start Tabs HTML -->
+            <div class="tabs">
+    
+                <input type="radio" id="tab1" name="tab-control" checked>
+                <input type="radio" id="tab2" name="tab-control">
+                <input type="radio" id="tab3" name="tab-control">  
+                <input type="radio" id="tab4" name="tab-control">
+                <ul class="tabs-ul">
+                    <li title="Features"><label for="tab1" role="button"><span><!--<img src="../../media/public/mining.svg" style="height:2em;"> -->Mining & Geology</span></label></li>
+                    <li title="Delivery Contents"><label for="tab2" role="button"><span><!--<img src="../../media/public/polarbear2.svg" style="height:2em;"> -->Polar Expeditions</span></label></li>
+                    <li title="Shipping"><label for="tab3" role="button"><span><!--<img src="../../media/public/camera.svg" style="height:2em;"> -->Photography</span></label></li>
+                    <li title="Returns"><label for="tab4" role="button"><span><!--<img src="../../media/public/translation.svg" style="height:2em;"> -->Translations</span></label></li>
+                </ul>
+                
+                <div class="slider"><div class="indicator"></div></div>
+    
+                <div class="content">
+                    <section>
+    
+                        <div class="slideshow-container">
+    
+                            <div class="mySlides1 fade">
+                              <img src="../../media/public/geology_mining01.jpg">
+                            </div>
+                            
+                            <div class="mySlides1 fade">
+                              <img src="../../media/public/geology_mining02.jpg">
+                            </div>
+                            
+                            <div class="mySlides1 fade">
+                              <img src="../../media/public/geology_mining03.jpg">
+                            </div>
+                            
+                            <div class="mySlides1 fade">
+                              <img src="../../media/public/geology_mining04.jpg">
+                            </div>
+                            
+                            <div class="mySlides1 fade">
+                              <img src="../../media/public/geology_mining05.jpg">
+                            </div>
+                            
+                            <div class="dot-positioning">
+                                <span class="dot1"></span> 
+                                <span class="dot1"></span> 
+                                <span class="dot1"></span> 
+                                <span class="dot1"></span> 
+                                <span class="dot1"></span> 
+                            </div>
+       
+                            <!-- Image Slideshow 1 Script -->
+                            <script>
+                                let slideIndex1 = 0;
+                                showSlides1();
+                                
+                                function showSlides1() {
+                                    let i1;
+                                    let slides1 = document.getElementsByClassName("mySlides1");
+                                    let dots1 = document.getElementsByClassName("dot1");
+                                    for (i1 = 0; i1 < slides1.length; i1++) {
+                                    slides1[i1].style.display = "none";  
+                                    }
+                                    slideIndex1++;
+                                    if (slideIndex1 > slides1.length) {slideIndex1 = 1}    
+                                    for (i1 = 0; i1 < dots1.length; i1++) {
+                                    dots1[i1].className = dots1[i1].className.replace(" active", "");
+                                    }
+                                    slides1[slideIndex1-1].style.display = "block";  
+                                    dots1[slideIndex1-1].className += " active";
+                                    setTimeout(showSlides1, 5000); // Change image every 5 seconds
+                                }
+                                </script>
+                            
+                        </div>
+    
+                        <span class="service-desc">TB Geocon is serving the mineral exploration industry across the world since 2012. The portfolio of disciplines and countries served have since continuously increased and improved. With a strong focus on mineral exploration projects within the Polar Regions, especially the Arctic around Greenland, TB Geocon is not limited to, but can support clients with the following services:
+                        <ul>
+                            <li>geological mapping (surface & underground)</li>
+                            <li>mineral exploratin & prospecting</li>
+                            <li>mine lease / target evaluation</li>
+                            <li>geologcial project planning & management</li>
+                            <li>drill programm setup</li>
+                            <li>underground reconnaissance of mines & caves</li>
+                            <li>geochemical sampling</li>
+                            <li>core logging</li>
+                            <li>setup of core logging & storage facilities</li>
+                        </ul>
+                        </span>
+                    
+                    </section>
+                    <section>
+    
+                        <div class="slideshow-container">
+    
+                            <div class="mySlides2 fade">
+                              <img src="../../media/public/expedition01.jpg">
+                            </div>
+                            
+                            <div class="mySlides2 fade">
+                              <img src="../../media/public/expedition02.jpg">
+                            </div>
+                            
+                            <div class="mySlides2 fade">
+                              <img src="../../media/public/expedition03.jpg">
+                            </div>
+                            
+                            <div class="mySlides2 fade">
+                              <img src="../../media/public/expedition04.jpg">
+                            </div>
+                            
+                            <div class="mySlides2 fade">
+                              <img src="../../media/public/expedition05.jpg">
+                            </div>
+                            
+                            <div class="mySlides2 fade">
+                              <img src="../../media/public/expedition06.jpg">
+                            </div>
+                            
+                            <div class="dot-positioning">
+                                <span class="dot2"></span> 
+                                <span class="dot2"></span> 
+                                <span class="dot2"></span> 
+                                <span class="dot2"></span> 
+                                <span class="dot2"></span> 
+                                <span class="dot2"></span> 
+                            </div>
+       
+                            <!-- Image Slideshow 1 Script -->
+                            <script>
+                                let slideIndex2 = 0;
+                                showSlides2();
+                                
+                                function showSlides2() {
+                                    let i2;
+                                    let slides2 = document.getElementsByClassName("mySlides2");
+                                    let dots2 = document.getElementsByClassName("dot2");
+                                    for (i2 = 0; i2 < slides2.length; i2++) {
+                                    slides2[i2].style.display = "none";  
+                                    }
+                                    slideIndex2++;
+                                    if (slideIndex2 > slides2.length) {slideIndex2 = 1}    
+                                    for (i2 = 0; i2 < dots2.length; i2++) {
+                                    dots2[i2].className = dots2[i2].className.replace(" active", "");
+                                    }
+                                    slides2[slideIndex2-1].style.display = "block";  
+                                    dots2[slideIndex2-1].className += " active";
+                                    setTimeout(showSlides2, 5000); // Change image every 5 seconds
+                                }
+                                </script>
+                            
+                        </div>
+    
+                        <span class="service-desc">Tobias is serving the polar expedition industry since 2014 working for various companies as Expedition Leader and Expedition Guide. Besides expedition support for the mineral exploration industry, most of the work is ship-based on expedition cruise ships of various size. Tasks and skills include:</p>
+                            <ul class="service-list">
+                                <li>leading expedition cruises in Polar Regions</li>
+                                <li>giving lectures/talks (especially geologically related, but also any other general topic)</li>
+                                <li>guiding on shore landings</li>
+                                <li>mountaineering guiding</li>
+                                <li>snowshoe guiding</li>
+                                <li>experienced Polar Small Boat / Zodiac Operator</li>
+                                <li>Experienced Firearms Handler for bear defence (incl. valid firearms license)</li>
+                                <li>Supporting operations with technical & medical skills</li>
+                            </ul>
+                        </span>
+                    </section>
+                    <section>
+                            
+                        <div class="mySlides3 fade">
+                          <img src="../../media/public/photography.jpg" style="height: 300px;">
+                        </div>
+                        <span class="service-desc">
+                            <p>Here will be a short introduction to my photography hobby and hopefully a link to my photography online shop.</p>
+                        </span>
+                    </section>
+                    <section>
+                            
+                        <div class="mySlides4 fade">
+                          <img src="../../media/public/translation.svg" style="height: 250px;">
+                        </div>
+                        <span class="service-desc">
+                            <p>You are looking for a scientific translation service for documents in the field of natural sciences - especially within geology and/or mining?</p>
+                            <p>TB Geocon can support you!</p>
+                        </span>
+                    </section>
+                </div>
+            </div>
+            <!-- End Tabs HTML -->
+    
+        </div>
+    
+    </div>
+</a>
+<!-- SERVICES SECTION - END -->
+
+{% endblock %}

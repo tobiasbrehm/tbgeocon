@@ -1,0 +1,59 @@
+.projects {
+    width: 86%;
+    height: auto;
+    padding: 3% 7%;
+    background-color: rgb(250, 250, 250);
+    /*background-color: rgb(245, 245, 245);*/
+}
+
+.projects h2 {
+    font-size: 1.1em;
+    margin-top: 2%;
+}
+
+.projects h3 {
+    font-size: 0.9em;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
+
+.projects-content ul {
+    column-count: 4;
+}
+
+.projects img {
+    width: 90%;
+    margin-top: 2%;
+}
+
+.projects .projects-content ul {
+    list-style: '- ' outside none;
+    column-count: 1;
+}
+
+.projects .projects-content ul.services-companies {
+    list-style-type: none;
+    column-count: 4;
+}
+
+.projects .projects-content ul.services-companies img {
+    width: 10em;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding: 5px;
+}
+
+.projects .projects-content .projects-worldmap {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.projects .projects-content .projects-worldmap img {
+    width: 70%;
+    margin: 0;
+    padding: 0;
+}
