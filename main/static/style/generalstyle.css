@@ -1,19 +1,17 @@
 html {
     width: 100%;
     scroll-behavior: smooth; /*back to top*/
-    scroll-snap-type: y mandatory;
-    /*overflow: hidden;*/
+    scroll-padding: 10%;
 }
 
 body {
     width: 100%;
     margin: 0;
-    font-family: Roboto, Nanum, 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    font-family: Nanum, 'Source Sans Pro', Arial, Helvetica, sans-serif;
     font-size: 1.0em;
     line-height: 1.5;
     display: grid; /*back to top*/
     grid-template-columns: auto 0px; /*back to top*/
-    scroll-behavior: smooth; /*back to top*/
 }
 
 /* back to top button - START */
@@ -52,6 +50,10 @@ body {
     border-right: 5px solid #fff;
 }
 /* back to top button - END */
+
+.hidden{
+  display: none;
+}
 
 h1, .about h1, .tabs .content section h2, .contact h1 {
     font-size: 1.3em;
