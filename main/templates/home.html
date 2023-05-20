@@ -23,7 +23,6 @@
 <!-- ABOUT SECTION - START -->
 <div id="about" class="about">
     <h2>{{ about.get_title_display }}</h2>
-    <h3>{{ LANGUAGE_CODE }}</h3>
     <div class="about-text">
         <p>{{ about.text | convert_markdown | safe }}</p>
     </div>
