@@ -1,5 +1,7 @@
 {% extends 'page.html' %}
 
+{% load markdown_extras %}
+
 {% block title %}TB Geocon - geological consulting{% endblock %}
 
 {% block content %}
@@ -18,37 +20,49 @@
 </div>
 <!-- HERO SECTION - END -->
 
-{% for section in sections %}
+<!-- ABOUT SECTION - START -->
+<div class="about">
+    <h2>{{ about.get_title_display }}</h2>
+    <div class="about-text">
+        <p>{{ about.text | convert_markdown | safe }}</p>
+    </div>
+</div>
+<!-- ABOUT SECTION - END -->
+
+<!-- Start Tabs HTML -->
 <div class="tabs">
-    <ul class="tabs-ul">
-        <li>{{section.get_title_display}}</li>
-    </ul> 
+    <div class="tabs-ul">
+        {% for section in sections %}
+            <button class="tab" id="{{ section.title }}" onclick="openTap('{{ section.title }}')">{{section.get_title_display}}</button>
+        {% endfor %}
+    </div> 
     <div class="slider"><div class="indicator"></div></div>   
 </div>
-{% endfor %}
-<div>
+<!-- End Tabs HTML -->
+
+
+<div class="services">
     {% for section in sections %}
-        <p>{{section.text}}</p>
+        <p>{{section.text | convert_markdown | safe}}</p>
         <div>
             {% for logo in section.logos.all %}
             {% endfor %}
         </div>
-        <div>
+        <section>
             {% for sub_section in section.sub_sections.all %}
-            <span>test</span>
             <div class="clip-container-right-arrow">
                 <img class="clipping-box-right-arrow" src="{{sub_section.img.url}}" alt="{{sub_section.img_alt}}">
                 <div class="clip-container-text">
-                    <h4>{{sub_section.title}}</h4>
-                    <p>{{ sub_section.text }}</p>
+                    <h4>{{ sub_section.title }}</h4>
+                    <p>{{ sub_section.text | convert_markdown | safe }}</p>
                 </div>
-            </div>
+        </section>
             {% endfor %}
     
         </div>
     {% endfor %}
     <div>
-        <div>
+        <div class="contact">
             <h2>Kontaktformular</h2>
             <form class="contact-form" method="post">
                 {% csrf_token %}

@@ -29,6 +29,7 @@ class section(models.Model):
         ("polar", "Polar Expeditions", ),
         ("photo", "Photography", ),
         ("translations", "Translations", ),
+        ("contact", "Contact", ),
     ]
     title = models.CharField(choices = MAIN_SECTIONS, max_length=50)
     img = models.ImageField(upload_to='uploads', blank=True, null=True)
@@ -36,7 +37,7 @@ class section(models.Model):
     text = models.TextField()
     text_de = models.TextField(blank=True)
     sub_sections = models.ManyToManyField(sub_section, blank=True)   
-    logos = models.ManyToManyField(logo, blank=True)
+    logos = models.ForeignKey(logo, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.get_title_display()
