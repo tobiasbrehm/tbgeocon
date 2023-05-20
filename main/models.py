@@ -37,7 +37,7 @@ class section(models.Model):
     text = models.TextField()
     text_de = models.TextField(blank=True)
     sub_sections = models.ManyToManyField(sub_section, blank=True)   
-    logos = models.ForeignKey(logo, on_delete=models.CASCADE, blank=True, null=True)
+    logos = models.ManyToManyField(logo, blank=True)
 
     def __str__(self):
         return self.get_title_display()
