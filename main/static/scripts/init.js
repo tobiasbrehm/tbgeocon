@@ -1,12 +1,5 @@
 function init(){
-    showSectionContent('mining');
-}
-
-
-function openTap(tab){
-    checkedButtonStyle(tab);
-    animateSlider(tab);
-    showSectionContent(tab);
+    openTap('mining');
 }
 
 
@@ -60,4 +53,10 @@ function showSectionContent(tab){
         section[i].style.display = 'none';
     }
     document.getElementById('section_' + tab).style.display = 'block';
+}
+
+function openTap(tab){
+    checkedButtonStyle(tab);
+    animateSlider(tab);
+    showSectionContent(tab);
 }

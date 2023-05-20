@@ -21,7 +21,7 @@
 <!-- HERO SECTION - END -->
 
 <!-- ABOUT SECTION - START -->
-<div class="about">
+<div id="about" class="about">
     <h2>{{ about.get_title_display }}</h2>
     <div class="about-text">
         <p>{{ about.text | convert_markdown | safe }}</p>
@@ -30,7 +30,7 @@
 <!-- ABOUT SECTION - END -->
 
 <!-- Start Tabs HTML -->
-<div class="tabs">
+<div id="services" class="tabs">
     <div class="tabs-ul">
         {% for section in sections %}
             <button class="tab" id="{{ section.title }}" onclick="openTap('{{ section.title }}')">{{section.get_title_display}}</button>
