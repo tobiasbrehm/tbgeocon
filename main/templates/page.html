@@ -1,5 +1,7 @@
 
 {% load markdown_extras %}
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,10 +39,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../media/public/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../media/public/favicon/favicon-16x16.png">
     <link rel="manifest" href="../../media/public/favicon/site.webmanifest">
-    
+
 </head>
 <body onload="init()">
-    
+    {% get_current_language as LANGUAGE_CODE %}   
 <header>
 
     <a class="head-left" href="#">
@@ -48,10 +50,18 @@
     </a>
 
     <div class="head-right">
-        <div class="head-right-lang">
-            <a><img src="../../media/public/de.svg" alt="German flag"></a>
-            <a><img src="../../media/public/en.svg" alt="British flag"></a>
-        </div>
+        <form action="{% url 'set_language' %}" method="post" class="head-right-lang language">
+            {% csrf_token %}
+            <input type="hidden" name="text" value="{{ redirect_to }}">
+
+            <button name="language" type="submit" value="en">
+                <img src="../../media/public/en.svg" alt="British flag">
+            </button>
+            <button name="language" type="submit" value="de">
+                <img src="../../media/public/de.svg" alt="German flag">
+            </button>
+        </form>
+
         <nav>
             <ul onclick="toggleNavbar()" id="nav" class="nav">
                 <li><a href="#about">About</a></li>

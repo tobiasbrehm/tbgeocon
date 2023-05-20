@@ -32,6 +32,10 @@ header {
     flex-direction: column;
 }
 
+header button{
+  background-color: unset;
+  border: none;
+}
 
 .head-right-lang {
     display: flex;

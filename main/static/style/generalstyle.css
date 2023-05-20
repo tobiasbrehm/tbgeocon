@@ -55,15 +55,10 @@ body {
   display: none;
 }
 
-h1, .about h1, .tabs .content section h2, .contact h1 {
+h2 {
     font-size: 1.3em;
     text-transform: uppercase;
     color: #6EA0D2;
-}
-
-/* klappt nicht...*/
-h2, .about h2, .projects h2 {
-    font-size: 1.1em;
 }
 
 .hero {
