@@ -2,3 +2,5 @@ config.json
 venv
 *.txt
 !requirements.txt
+__pycache__/
+*.py[cod]
