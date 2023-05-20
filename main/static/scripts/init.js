@@ -1,13 +1,14 @@
 function init(){
-
+    showSectionContent('mining');
 }
-
 
 
 function openTap(tab){
     checkedButtonStyle(tab);
     animateSlider(tab);
+    showSectionContent(tab);
 }
+
 
 function remove_slider_classes(){
     document.getElementById('slider').classList.remove('slider-one');
@@ -15,6 +16,7 @@ function remove_slider_classes(){
     document.getElementById('slider').classList.remove('slider-three');
     document.getElementById('slider').classList.remove('slider-four');
 }
+
 
 function animateSlider(tab){
     remove_slider_classes();
@@ -48,4 +50,14 @@ function checkedButtonStyle(tab){
         tabs[i].classList.remove('checked');
     }
     document.getElementById(tab).classList.add('checked');
+}
+
+
+function showSectionContent(tab){
+    var i;
+    let section = document.getElementsByClassName("section");
+    for (i = 0; i < section.length; i++) {
+        section[i].style.display = 'none';
+    }
+    document.getElementById('section_' + tab).style.display = 'block';
 }

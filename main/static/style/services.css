@@ -1,4 +1,7 @@
 /* --- Service Tabs - START --- */
+.services{
+    padding: 3% 7%;
+}
 
 .tabs {
     left: 50%;
@@ -86,7 +89,7 @@
     background-color: rgb(255, 255, 255);
 }
 
-.content section {
+.services section {
     display: none;
     -webkit-animation-name: content;
             animation-name: content;

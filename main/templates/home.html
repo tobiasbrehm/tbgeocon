@@ -43,12 +43,12 @@
 
 <div class="services">
     {% for section in sections %}
-        <p>{{section.text | convert_markdown | safe}}</p>
-        <div>
-            {% for logo in section.logos.all %}
-            {% endfor %}
-        </div>
-        <section>
+        <section id="section_{{ section.title }}" class="section">
+            <p>{{section.text | convert_markdown | safe}}</p>
+            <div>
+                {% for logo in section.logos.all %}
+                {% endfor %}
+            </div>
             {% for sub_section in section.sub_sections.all %}
             <div class="clip-container-right-arrow">
                 <img class="clipping-box-right-arrow" src="{{sub_section.img.url}}" alt="{{sub_section.img_alt}}">
@@ -56,11 +56,11 @@
                     <h4>{{ sub_section.title }}</h4>
                     <p>{{ sub_section.text | convert_markdown | safe }}</p>
                 </div>
-        </section>
+            </div>    
             {% endfor %}
-    
-        </div>
+        </section>
     {% endfor %}
+</div>
     <div>
         <div class="contact">
             <h2>Kontaktformular</h2>
@@ -75,5 +75,5 @@
         <div>
         </div>  
     </div>
-</div>
+
 {% endblock %}
