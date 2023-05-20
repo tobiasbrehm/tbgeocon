@@ -1,5 +1,5 @@
 :root{
-  --header-height: 100px;
+  --header-height: 80px;
 }
 
 header {
@@ -24,13 +24,12 @@ header {
 }
 
 .head-left img {
-    height: var(--header-height);
+    height: 100%;
 }
 
 .head-right {
   display: flex;
   flex-direction: column;
-  min-width: fit-content;
 }
 
 
@@ -39,10 +38,11 @@ header {
     justify-content: end;
     padding-right: 0.5em;
     gap: 10px;
+    height: 16px;
 }
 
 .head-right-lang img {
-    height: 10px;
+    height: 100%;
     cursor: pointer;
 }
 
