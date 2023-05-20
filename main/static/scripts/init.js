@@ -1,5 +1,18 @@
+let NavbarBtn;
+let btnIcon;
+let navLinks;
+
 function init(){
     openTap('mining');
+    NavbarBtn = document.getElementById('navbar-btn');
+    btnIcon = document.getElementById('btn-icon');
+    navLinks = document.getElementById('nav');
+}
+
+
+function toggleNavbar() {
+    btnIcon.classList.toggle('openNav');
+    navLinks.classList.toggle('openNav');
 }
 
 
