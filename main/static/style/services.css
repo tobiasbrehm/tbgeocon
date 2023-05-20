@@ -60,6 +60,26 @@
     border-radius: 1px;
 }
 
+.slider-one{
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+}
+
+.slider-two{
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+}
+
+.slider-three{
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+}
+
+.slider-four{
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+}
+
 .content {
     width: 100%;
     margin-top: 50px;
