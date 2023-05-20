@@ -61,18 +61,60 @@
         </section>
     {% endfor %}
 </div>
-    <div>
-        <div id="contact" class="contact">
-            <h2>Kontaktformular</h2>
-            <form class="contact-form" method="post">
-                {% csrf_token %}
-                {{ form_de.as_p }}
-                <div>
-                  <button class="send-button" type="submit">Send</button>
-                </div>
-              </form>
+    <div class="contact-block">
+        <div class="contact-block-form">
+            <div id="contact" class="contact">
+                <h2>Kontaktformular</h2>
+                <form class="contact-form" method="post">
+                    {% csrf_token %}
+                    {{ form_de.as_p }}
+                    <div>
+                      <button class="send-button" type="submit">Send</button>
+                    </div>
+                  </form>
+            </div>
         </div>
-        <div>
+        <div class="contact-info">
+            <div class="contact-info-block">
+                <div class="contact-info-img">
+                    <img src="../../media/public/location.svg" alt="Location pin">
+                </div>
+                <div class="contact-info-text">
+                    <p>
+                        <span>Address:</span></br>Wasserhaus 86, 4142 Münchenstein, Switzerland
+                    </p>
+                </div>
+            </div>
+            <div class="contact-info-block">
+                <div class="contact-info-img">
+                    <img src="../../media/public/phone.svg" alt="Phone symbol">
+                </div>
+                <div class="contact-info-text">
+                    <p>
+                        <span>Phone:</span></br><a href="tel://+41794684171">+41 79 468 41 71</a>
+                    </p>
+                </div>
+            </div>
+            <div class="contact-info-block">
+                <div class="contact-info-img">
+                    <img src="../../media/public/mail.svg" alt="Phone symbol">
+                </div>
+                <div class="contact-info-text">
+                    <p>
+                        <span>Email:</span></br><a href="mailto://info@tbgeocon.com">info@tbgeocon.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="contact-info-block">
+                <div class="contact-info-img">
+                    <img src="../../media/public/globe.svg" alt="Phone symbol">
+                </div>
+                <div class="contact-info-text">
+                    <p>
+                        <span>Website:</span></br><a href="https://tbgeocon.com">https://tbgeocon.com</a>
+                    </p>
+                </div>
+            </div>
         </div>  
     </div>
 
