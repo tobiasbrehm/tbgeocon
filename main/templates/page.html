@@ -44,11 +44,10 @@
 <body onload="init()">
     {% get_current_language as LANGUAGE_CODE %}   
 <header>
-
     <a class="head-left" href="#">
         <img src="../../media/public/logo.png" alt="TB Geocon company logo">
     </a>
-
+    
     <div class="head-right">
         <form action="{% url 'set_language' %}" method="post" class="head-right-lang language">
             {% csrf_token %}

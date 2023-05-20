@@ -4,12 +4,10 @@
 
 header {
     position: fixed;
-    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
     height: var(--header-height);
-    left: 50%;
-    top: 0%;
-    transform: translateX(-50%);
-    margin: auto;
     z-index: 999;
     padding: 10px 1%;
     background-color: rgba(255,255,255,0.99);
@@ -19,7 +17,8 @@ header {
     box-sizing: border-box;
 }
 
-.header-left {
+.head-left {
+    display: flex;
     width: 25%;
 }
 
@@ -30,12 +29,14 @@ header {
 .head-right {
     display: flex;
     flex-direction: column;
+    width: 75%;
 }
 
 header button{
   background-color: unset;
   border: none;
   padding: 0;
+  max-width: fit-content;
 }
 
 .head-right-lang {
@@ -49,14 +50,19 @@ header button{
 .head-right-lang img {
     height: 100%;
     cursor: pointer;
+    width: 30px;
 }
 
+nav{
+  display: flex;
+  justify-content: end;
+}
 
 .nav {
-    text-align: center;
     text-transform: uppercase;
     font-size: 1em;
     padding-inline-start: 0;
+    max-width: fit-content;
 }
 
 .nav * {
