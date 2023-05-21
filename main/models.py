@@ -1,8 +1,9 @@
 from django.db import models
+from django.utils.html import mark_safe
 
 # Create your models here.
 
-class sub_section(models.Model):
+class Sub_Section(models.Model):
     title = models.CharField(max_length=50)
     img = models.ImageField(upload_to='uploads')
     img_alt = models.CharField(max_length=50)
@@ -11,18 +12,28 @@ class sub_section(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def img_preview(self): 
+        return mark_safe(f'<img src = "{self.img.url}" width = "200"/>')
+    
+    class Meta:
+        verbose_name = "Sub section"
+        verbose_name_plural = "Sub sections"
 
 
-
-class logo(models.Model):
+class Logo(models.Model):
     title = models.CharField(max_length=50)  
     img = models.ImageField(upload_to='uploads')
     img_alt = models.CharField(max_length=50)
 
     def __str__(self):
         return self.title
+    
+    def img_preview(self): 
+        return mark_safe(f'<img src = "{self.img.url}" width = "200"/>')
 
-class section(models.Model):
+
+class Section(models.Model):
     MAIN_SECTIONS = [
         ("about", "About", ),
         ("mining", "Mining & Geology", ),
@@ -36,9 +47,11 @@ class section(models.Model):
     img_alt = models.CharField(max_length=50, blank=True, null=True)
     text = models.TextField()
     text_de = models.TextField(blank=True)
-    sub_sections = models.ManyToManyField(sub_section, blank=True)   
-    logos = models.ManyToManyField(logo, blank=True)
+    sub_sections = models.ManyToManyField(Sub_Section, blank=True)   
+    logos = models.ManyToManyField(Logo, blank=True)
 
     def __str__(self):
         return self.get_title_display()
     
+    def img_preview(self): 
+        return mark_safe(f'<img src = "{self.img.url}" width = "200"/>')

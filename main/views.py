@@ -1,17 +1,17 @@
 from django.shortcuts import render
-from .models import section
+from .models import Section
 from .forms import ContactForm_de
 
 # Create your views here.
 
 def home (request):
     sections = []
-    about = section.objects.get(title = 'about')
-    mining = section.objects.get(title = 'mining')
-    polar = section.objects.get(title = 'polar')
-    photo = section.objects.get(title = 'photo')
-    translations = section.objects.get(title = 'translations')
-    contact = section.objects.get(title = 'contact')
+    about = Section.objects.get(title = 'about')
+    mining = Section.objects.get(title = 'mining')
+    polar = Section.objects.get(title = 'polar')
+    photo = Section.objects.get(title = 'photo')
+    translations = Section.objects.get(title = 'translations')
+    contact = Section.objects.get(title = 'contact')
     sections.append(mining)
     sections.append(polar)
     sections.append(photo)

@@ -136,3 +136,33 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+JAZZMIN_SETTINGS ={
+"site_logo": "../media/public/favicon/favicon.ico",
+"site_title": "TB Geocon Admin",
+"copyright": "TB Geocon",
+"welcome_sign": "Welcome to TB Geocon Admin",
+"site_brand": "TB Geocon",
+"icons":{
+    "auth": "fas fa-users-cog",
+    "auth.Group": "fas fa-users",
+    "auth.user": "fas fa-user",
+    "main.Logo": "fab fa-css3",
+    "main.Section": "fas fa-list",
+    "main.Sub_section": "fas fa-sitemap",
+},
+"custom_css": "backend.css",
+"custom_links": {
+    "main": [{
+        "name": "Home",
+        "url": "http://127.0.0.1:8000/",
+        "icon": "fas fa-home",
+    }]
+},
+"order_with_respect_to": ["main", "main.Section", "main.Sub_section", "main.Logo", "auth"],
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "cerulean",
+}
