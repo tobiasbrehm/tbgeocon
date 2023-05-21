@@ -1,0 +1,35 @@
+Alte:
+
+- Contact form ähnlich https://preview.colorlib.com/theme/bootstrap/contact-form-03/
+
+- Geology is a lifestyle?
+
+- Parallax-Effekt
+
+
+
+
+2023-05-21:
+
+
+Section About:
+
+- Foto bei About fehlt -> kann es nicht hochladen -> Seite crashed
+
+
+Section Services:
+
+- Abstand zwischen Tabs und Intro-Text zu gross
+
+- Abstand zwischen Intro-Text und Sub-Sections zu klein
+
+- Foto bei Photography fehlt
+
+- Graphik bei Translation fehlt
+
+
+Section Contact:
+
+- aktives Input-Feld, dünnerer blauer Rahmen (1px oder 0.5px)
+
+- contact-info: elemente horizontal und vertical zentriert
