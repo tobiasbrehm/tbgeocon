@@ -23,8 +23,11 @@
 <!-- ABOUT SECTION - START -->
 <div id="about" class="about">
     <h2>{{ about.get_title_display }}</h2>
-    <div class="about-text">
-        <p>{{ about.text | convert_markdown | safe }}</p>
+    <div class="about-content">
+        <div>{{ about.text | convert_markdown | safe }}</div>
+        {% if about.img %}
+        <img src="{{ about.img.url }}" alt="{{ about.img_alt }}">
+        {% endif %}
     </div>
 </div>
 <!-- ABOUT SECTION - END -->
