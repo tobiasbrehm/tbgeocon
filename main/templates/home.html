@@ -44,7 +44,7 @@
 <div class="services">
     {% for section in sections %}
         <section id="section_{{ section.title }}" class="section">
-            <p>{{section.text | convert_markdown | safe}}</p>
+            <p class="service-intro-text">{{section.text | convert_markdown | safe}}</p>
             <div>
                 {% for logo in section.logos.all %}
                 {% endfor %}
