@@ -40,6 +40,10 @@
   text-transform: uppercase;
 }
 
+.contact-form input:focus{
+  outline: solid 1px #6EA0D2;
+}
+
 .contact-form input {
   border: none;
   border-bottom: 1px solid rgba(0,0,0,0.1);

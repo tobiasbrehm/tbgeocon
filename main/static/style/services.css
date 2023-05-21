@@ -14,6 +14,7 @@
 
 .section-content{
     display: flex;
+    padding: 2% 0 1% 0;
 }
 
 .section-content img{

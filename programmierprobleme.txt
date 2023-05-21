@@ -14,22 +14,22 @@ Alte:
 
 Section About:
 
-- Foto bei About fehlt -> kann es nicht hochladen -> Seite crashed
+- Foto bei About fehlt -> kann es nicht hochladen -> Seite crashed --> erledigt
 
 
 Section Services:
 
-- Abstand zwischen Tabs und Intro-Text zu gross
+- Abstand zwischen Tabs und Intro-Text zu gross  --> erledigt (kannst du im File services.css line 17 anpassen)
 
-- Abstand zwischen Intro-Text und Sub-Sections zu klein
+- Abstand zwischen Intro-Text und Sub-Sections zu klein --> erledigt (kannst du im File services.css line 17 anpassen)
 
-- Foto bei Photography fehlt
+- Foto bei Photography fehlt --> erledigt
 
-- Graphik bei Translation fehlt
+- Graphik bei Translation fehlt  --> erledigt
 
 
 Section Contact:
 
-- aktives Input-Feld, dünnerer blauer Rahmen (1px oder 0.5px)
+- aktives Input-Feld, dünnerer blauer Rahmen (1px oder 0.5px) --> erledigt (siehe contact.css line 43-45)
 
 - contact-info: elemente horizontal und vertical zentriert
