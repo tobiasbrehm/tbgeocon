@@ -47,7 +47,12 @@
 <div class="services">
     {% for section in sections %}
         <section id="section_{{ section.title }}" class="section">
-            <p class="service-intro-text">{{section.text | convert_markdown | safe}}</p>
+            <div class="section-content">
+                {% if section.img %}
+                <img src="{{ section.img.url }}" alt="{{ section.img_alt }}">
+                {% endif %}
+                <p class="service-intro-text">{{section.text | convert_markdown | safe}}</p>
+            </div>
             <div>
                 {% for logo in section.logos.all %}
                 {% endfor %}

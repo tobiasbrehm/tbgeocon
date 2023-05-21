@@ -9,7 +9,17 @@
 }
 
 .service-intro-text {
-    padding: 3%;
+    padding: 3% 0;
+}
+
+.section-content{
+    display: flex;
+}
+
+.section-content img{
+    max-width: 20%;
+    max-height: 200px;
+    margin-right: 3%;
 }
 
 .tabs {
