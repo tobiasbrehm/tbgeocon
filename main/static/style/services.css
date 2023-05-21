@@ -220,3 +220,20 @@
 }
 
 /* Arrow Images with Text - END */
+
+/* Logos - START */
+.logos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 3%;
+}
+
+.logos img{
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+}
+/* Logos - End */

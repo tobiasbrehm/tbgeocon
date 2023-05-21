@@ -53,9 +53,12 @@
                 {% endif %}
                 <p class="service-intro-text">{{section.text | convert_markdown | safe}}</p>
             </div>
-            <div>
-                {% for logo in section.logos.all %}
-                {% endfor %}
+            <div class="logos">
+                {% if section.logos %}
+                    {% for logo in section.logos.all %}
+                        <img src="{{logo.img.url}}" alt="{{logo.img_alt}}">
+                    {% endfor %}
+                {% endif %}
             </div>
             {% for sub_section in section.sub_sections.all %}
             <div class="clip-container-right-arrow">
