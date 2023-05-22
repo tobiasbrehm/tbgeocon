@@ -12,6 +12,10 @@ Section Contact:
 
 - Hover-Effekt auf Button wie hier: https://preview.colorlib.com/theme/bootstrap/contact-form-03/
 
+- braucht es: 
+  -webkit-user-select: text;
+  -webkit-appearance: button;
+  -webkit-user-select: none;
 
 
 
