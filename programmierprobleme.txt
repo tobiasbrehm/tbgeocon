@@ -1,10 +1,31 @@
-Alte:
 
-- Contact form ähnlich https://preview.colorlib.com/theme/bootstrap/contact-form-03/
+2023-05-22:
 
-- Geology is a lifestyle?
+Section Services:
 
-- Parallax-Effekt
+- NAMA-Logo kleiner (Toby)
+
+
+Section Contact:
+
+- Englisches Kontaktformular 
+
+- Hover-Effekt auf Button wie hier: https://preview.colorlib.com/theme/bootstrap/contact-form-03/
+
+
+E-Mail-Server-Daten:
+
+    Email:          contact@tbgeocon.com
+
+    PW:             Severin2023!
+
+    Posteingang:    imap.ionos.de
+
+    Eingangsport:   993
+
+    Postausgang:    smtp.ionos.de
+
+    Ausgangsport:   587
 
 
 
@@ -33,3 +54,13 @@ Section Contact:
 - aktives Input-Feld, dünnerer blauer Rahmen (1px oder 0.5px) --> erledigt (siehe contact.css line 43-45)
 
 - contact-info: elemente horizontal und vertical zentriert
+
+
+
+Alte:
+
+- Contact form ähnlich https://preview.colorlib.com/theme/bootstrap/contact-form-03/
+
+- Geology is a lifestyle?
+
+- Parallax-Effekt
