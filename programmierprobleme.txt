@@ -5,7 +5,7 @@ Section Services:
 
 - NAMA-Logo kleiner (Toby)
 
-- Andere Reihenfolge bei den Logos:
+- Andere Reihenfolge bei den Logos: --> erledigt (logo hat neues attribut weight mit dem die Reihenfolge bestimmt werden kann)
     1) greenfields exploration
     2) deutsche flussspat
     3) deutsche rohstoff
@@ -19,7 +19,7 @@ Section Services:
 
 Section Contact:
 
-- Englisches Kontaktformular 
+- Englisches Kontaktformular --> erledigt
 
 - Hover-Effekt auf Button wie hier: https://preview.colorlib.com/theme/bootstrap/contact-form-03/
 

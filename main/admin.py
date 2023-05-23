@@ -14,7 +14,7 @@ class SubSectionAdmin(admin.ModelAdmin):
 class LogoAdmin(admin.ModelAdmin):
     readonly_fields = ['img_preview']
     list_display = ['__str__', 'img_preview']   
-    fields = ['title', 'img', 'img_preview', 'img_alt'] 
+    fields = ['title', 'img', 'img_preview', 'img_alt', 'weight'] 
 
 admin.site.register(Section, SectionAdmin)
 admin.site.register(Sub_Section, SubSectionAdmin)

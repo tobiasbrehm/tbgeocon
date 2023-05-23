@@ -5,6 +5,7 @@ from django.utils.html import mark_safe
 
 class Sub_Section(models.Model):
     title = models.CharField(max_length=50)
+    title_de = models.CharField(max_length=50, blank=True)
     img = models.ImageField(upload_to='uploads')
     img_alt = models.CharField(max_length=50)
     text = models.TextField()
@@ -25,7 +26,11 @@ class Logo(models.Model):
     title = models.CharField(max_length=50)  
     img = models.ImageField(upload_to='uploads')
     img_alt = models.CharField(max_length=50)
+    weight = models.IntegerField(default=0)
 
+    class Meta: 
+        ordering = ['weight']
+        
     def __str__(self):
         return self.title
     
