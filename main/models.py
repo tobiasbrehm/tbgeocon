@@ -40,12 +40,14 @@ class Logo(models.Model):
 
 class Section(models.Model):
     MAIN_SECTIONS = [
-        ("about", "About", ),
-        ("mining", "Mining & Geology", ),
-        ("polar", "Polar Expeditions", ),
-        ("photo", "Photography", ),
-        ("translations", "Translations", ),
-        ("contact", "Contact", ),
+        ("about", "About"),
+        ("mining", "Mining & Geology"),
+        ("polar", "Polar Expeditions"),
+        ("photo", "Photography"),
+        ("translations", "Translations"),
+        ("contact", "Contact"),
+        ("impressum", "Impressum"),
+        ("legal", "Data Protection"),
     ]
     title = models.CharField(choices = MAIN_SECTIONS, max_length=50)
     img = models.ImageField(upload_to='uploads', blank=True, null=True)

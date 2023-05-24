@@ -65,18 +65,58 @@
                 <img class="clipping-box-right-arrow" src="{{sub_section.img.url}}" alt="{{sub_section.img_alt}}">
                 <div class="clip-container-text">
                     <h4>{{ sub_section.title }}</h4>
-                    <p>{{ sub_section.text | convert_markdown | safe }}</p>
+                    <span>{{ sub_section.text | convert_markdown | safe }}</span>
                 </div>
             </div>    
             {% endfor %}
         </section>
     {% endfor %}
 </div>
+
+<!-- Mobile Version Services -->
+<div class="services_mobile">
+    {% for section in sections %}
+        <section class="section_mobile">
+            <h2>{{section.get_title_display}}</h2>
+            <div class="section-content">
+                {% if section.img %}
+                <img src="{{ section.img.url }}" alt="{{ section.img_alt }}">
+                {% endif %}
+                <span class="service-intro-text">{{section.text | convert_markdown | safe}}</span>
+            </div>
+            <div class="logos">
+                {% if section.logos %}
+                    {% for logo in section.logos.all %}
+                        <img src="{{logo.img.url}}" alt="{{logo.img_alt}}">
+                    {% endfor %}
+                {% endif %}
+            </div>
+            {% for sub_section in section.sub_sections.all %}
+            <div class="clip-container-right-arrow">
+                <div class="img_and_title">
+                    <img class="clipping-box-right-arrow" src="{{sub_section.img.url}}" alt="{{sub_section.img_alt}}">
+                    <h4>{{ sub_section.title }}</h4>
+                </div>
+                {% if LANGUAGE_CODE == 'de' and sub_section.text_de %}
+                    <span>{{ sub_section.text_de | convert_markdown | safe }}</span>
+                {% else %}    
+                    <span>{{ sub_section.text | convert_markdown | safe }}</span>
+                {% endif %}
+            </div>    
+            {% endfor %}
+        </section>
+    {% endfor %}
+</div>
+
     <div class="contact-block">
         <div class="contact-block-form">
             <div id="contact" class="contact">
                 {% if LANGUAGE_CODE == 'de' %}
                     <h2>Kontaktformular</h2>
+                    {{ submitted }}
+                    {% if submitted %}
+                    <div>Danke für Ihre Nachricht.</div>
+                    {% else %}
                     <form class="contact-form" method="post">
                         {% csrf_token %}
                         {{ form_de.as_p }}
@@ -84,8 +124,12 @@
                         <button class="send-button" type="submit">Senden</button>
                         </div>
                     </form>
+                    {% endif %}
                 {% else %}
                 <h2>Contactform</h2>
+                {% if submitted %}
+                    <div>Thank you for your message!</div>
+                {% else %}
                 <form class="contact-form" method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
@@ -93,6 +137,7 @@
                     <button class="send-button" type="submit">Send</button>
                     </div>
                 </form>
+                {% endif %}
                 {% endif %}
             </div>
         </div>

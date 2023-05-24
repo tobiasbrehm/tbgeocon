@@ -139,9 +139,9 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email settings
-DEFAULT_FROM_EMAIL = 'Admin <admin@dein_host.ch>'  # Name unter dem die E-Mail verschickt wird und die dazugehörige E-Mail-Adresse
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # SMTP-Backend
-EMAIL_HOST = 'smpt.dein_host.ch'
+DEFAULT_FROM_EMAIL = 'Kontakt <contact@tbgeocon.com>'  # Name unter dem die E-Mail verschickt wird und die dazugehörige E-Mail-Adresse
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'#django.core.mail.backends.smtp.EmailBackend'  # SMTP-Backend
+EMAIL_HOST = 'smpt.ionos.de'
 EMAIL_PORT = 587 # oder 587 oder was immer der Port deines E-Mail-Providers ist
 EMAIL_USE_TLS = True  # Verbindung benutzt TLS-Verschlüsselung
 EMAIL_HOST_USER = config['EMAIL_HOST_USER']
@@ -179,7 +179,7 @@ JAZZMIN_UI_TWEAKS = {
 # Recaptcha
 RECAPTCHA_PUBLIC_KEY = '6LfRCy8mAAAAAJPesMMSEujcb7hY9OphZ6JKBKM8'
 RECAPTCHA_PRIVATE_KEY = config['RECAPTCHA_PRIVATE_KEY']
-RECAPTCHA_REQUIRED_SCORE = 0.85
+RECAPTCHA_REQUIRED_SCORE = 0.1
 
 
 # only for development, delete befor deploying

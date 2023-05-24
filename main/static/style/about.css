@@ -10,6 +10,7 @@
     /*color: rgb(70, 75, 80);*/
     color: black;
     display: flex;
+    width: 100%;
 }
 
 .about img {
@@ -17,4 +18,18 @@
     height: 275px;
     border-radius: 1%;
     margin: 0.83em 20px;
+    object-fit: cover;
+}
+
+@media (max-width: 890px){
+    .about-content{
+        flex-direction: column;
+    }
+    .about img{
+        margin: 0;
+        object-position: 0 -175px;
+        height: 400px;
+        max-width: 100%;
+        float: unset;
+    }
 }

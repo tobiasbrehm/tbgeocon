@@ -73,3 +73,15 @@ function openTap(tab){
     animateSlider(tab);
     showSectionContent(tab);
 }
+
+function openPopup(popup){
+    id = 'popup-'+ popup;
+    document.getElementById(id).classList.remove('hidden');
+    document.getElementById('body').classList.add('no-scroll');
+}
+
+function closePopup(){
+    document.getElementById('popup-dataprotection').classList.add('hidden');
+    document.getElementById('popup-impressum').classList.add('hidden');
+    document.getElementById('body').classList.remove('no-scroll');
+}
