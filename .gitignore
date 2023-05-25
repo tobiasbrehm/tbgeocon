@@ -1,1 +1,7 @@
 config.json
+venv
+*.txt
+!requirements.txt
+!programmierprobleme.txt
+__pycache__/
+*.py[cod]

@@ -20,7 +20,10 @@ from django.conf.urls.static import static
 from django.conf import settings
 from main.views import home
 
+from django.urls import include
+
 urlpatterns = [
+    path('i18n/', include('django.conf.urls.i18n')),
     path('admin/', admin.site.urls),
     path('', home, name='home')
 ]

@@ -15,7 +15,7 @@ import os
 import json
 
 #
-with open('conf.json') as config_file:
+with open('config.json') as config_file:
     config = json.load(config_file)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,17 +26,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config["SECRET_KEY"]
+SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
+ALLOWED_HOSTS = ['localhost','127.0.0.1', '192.168.0.44']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
+    'captcha',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,6 +51,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -110,11 +113,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
@@ -132,3 +137,50 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email settings
+DEFAULT_FROM_EMAIL = 'Kontakt <contact@tbgeocon.com>'  # Name unter dem die E-Mail verschickt wird und die dazugehörige E-Mail-Adresse
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'#django.core.mail.backends.smtp.EmailBackend'  # SMTP-Backend
+EMAIL_HOST = 'smpt.ionos.de'
+EMAIL_PORT = 587 # oder 587 oder was immer der Port deines E-Mail-Providers ist
+EMAIL_USE_TLS = True  # Verbindung benutzt TLS-Verschlüsselung
+EMAIL_HOST_USER = config['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = config['EMAIL_HOST_PASSWORD']
+
+JAZZMIN_SETTINGS ={
+"site_logo": "../media/public/favicon/favicon.ico",
+"site_title": "TB Geocon Admin",
+"copyright": "TB Geocon",
+"welcome_sign": "Welcome to TB Geocon Admin",
+"site_brand": "TB Geocon",
+"icons":{
+    "auth": "fas fa-users-cog",
+    "auth.Group": "fas fa-users",
+    "auth.user": "fas fa-user",
+    "main.Logo": "fab fa-css3",
+    "main.Section": "fas fa-list",
+    "main.Sub_section": "fas fa-sitemap",
+},
+"custom_css": "backend.css",
+"custom_links": {
+    "main": [{
+        "name": "Home",
+        "url": "http://127.0.0.1:8000/",
+        "icon": "fas fa-home",
+    }]
+},
+"order_with_respect_to": ["main", "main.Section", "main.Sub_section", "main.Logo", "auth"],
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "cerulean",
+}
+
+# Recaptcha
+RECAPTCHA_PUBLIC_KEY = '6LfRCy8mAAAAAJPesMMSEujcb7hY9OphZ6JKBKM8'
+RECAPTCHA_PRIVATE_KEY = config['RECAPTCHA_PRIVATE_KEY']
+RECAPTCHA_REQUIRED_SCORE = 0
+
+
+# only for development, delete befor deploying
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']

@@ -1,0 +1,80 @@
+
+2023-05-24:
+
+Severin: Contact form submitted --> erledigt 
+         Scroll contact submitted  --> erledigt
+         close popup backclick 
+         Subsection Titel für deutsche Version --> erledigt
+         Website bleibt beim Sprache umstellen wo sie ist und springt nicht hoch auf Start
+
+Toby: -Logo Nama (rand)
+      - Übersetzungen -> in Arbeit
+      - Text Sruface mapping -> erledigt
+      - Link photography -> erledigt, aber gibt noch Formatierungsprobleme        
+
+
+2023-05-22:
+
+Section Services:
+
+- NAMA-Logo kleiner (Toby)
+
+- Andere Reihenfolge bei den Logos: --> erledigt (logo hat neues attribut weight mit dem die Reihenfolge bestimmt werden kann)
+    1) greenfields exploration
+    2) deutsche flussspat
+    3) deutsche rohstoff
+    4) european cobalt
+    5) alderan
+    6) minconsult
+    7) dm bergbau
+    8) nama
+
+
+
+Section Contact:
+
+- Englisches Kontaktformular --> erledigt
+
+- Hover-Effekt auf Button wie hier: https://preview.colorlib.com/theme/bootstrap/contact-form-03/
+
+- braucht es: 
+  -webkit-user-select: text;
+  -webkit-appearance: button;
+  -webkit-user-select: none;
+
+
+
+2023-05-21:
+
+
+Section About:
+
+- Foto bei About fehlt -> kann es nicht hochladen -> Seite crashed --> erledigt
+
+
+Section Services:
+
+- Abstand zwischen Tabs und Intro-Text zu gross  --> erledigt (kannst du im File services.css line 17 anpassen)
+
+- Abstand zwischen Intro-Text und Sub-Sections zu klein --> erledigt (kannst du im File services.css line 17 anpassen)
+
+- Foto bei Photography fehlt --> erledigt
+
+- Graphik bei Translation fehlt  --> erledigt
+
+
+Section Contact:
+
+- aktives Input-Feld, dünnerer blauer Rahmen (1px oder 0.5px) --> erledigt (siehe contact.css line 43-45)
+
+- contact-info: elemente horizontal und vertical zentriert
+
+
+
+Alte:
+
+- Contact form ähnlich https://preview.colorlib.com/theme/bootstrap/contact-form-03/
+
+- Geology is a lifestyle?
+
+- Parallax-Effekt
