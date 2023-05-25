@@ -23,6 +23,7 @@ def home (request):
     sections.append(polar)
     sections.append(photo)
     sections.append(translations) 
+
     submitted = False
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -38,7 +39,7 @@ def home (request):
             msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
             msg.attach_alternative(html_content, "text/html")
             msg.send()
-            return HttpResponseRedirect('#contact?submitted=True')
+            return HttpResponseRedirect('?submitted=True')
     else:
         form = ContactForm()
         form_de = ContactForm_de()

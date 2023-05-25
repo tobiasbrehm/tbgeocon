@@ -1,10 +1,10 @@
 
 2023-05-24:
 
-Severin: Contact form submitted
-         Scroll contact submitted
-         close popup backclick
-         Subsection Titel für deutsche Version
+Severin: Contact form submitted --> erledigt 
+         Scroll contact submitted  --> erledigt
+         close popup backclick 
+         Subsection Titel für deutsche Version --> erledigt
          Website bleibt beim Sprache umstellen wo sie ist und springt nicht hoch auf Start
 
 Toby: -Logo Nama (rand)

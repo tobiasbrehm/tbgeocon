@@ -50,6 +50,7 @@ class Section(models.Model):
         ("legal", "Data Protection"),
     ]
     title = models.CharField(choices = MAIN_SECTIONS, max_length=50)
+    title_de = models.CharField(max_length=50, blank=True)
     img = models.ImageField(upload_to='uploads', blank=True, null=True)
     img_alt = models.CharField(max_length=50, blank=True, null=True)
     text = models.TextField()
