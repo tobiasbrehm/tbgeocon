@@ -4,11 +4,13 @@
 Severin: Contact form submitted
          Scroll contact submitted
          close popup backclick
+         Subsection Titel für deutsche Version
+         Website bleibt beim Sprache umstellen wo sie ist und springt nicht hoch auf Start
 
 Toby: -Logo Nama (rand)
-      - Übersetzungen
-      - Text Sruface mapping
-      - Link photography         
+      - Übersetzungen -> in Arbeit
+      - Text Sruface mapping -> erledigt
+      - Link photography -> erledigt, aber gibt noch Formatierungsprobleme        
 
 
 2023-05-22:

@@ -10,11 +10,21 @@
 <div class="hero">
     <img src="../../media/public/hero.jpg" alt="Start picture of a massive iceberg in Greenland">
     <div class="hero-content">
-        <span>
-        TB Geocon, a geological consultancy</br>
-        focussed on the mineral exploration and mining sector</br>
-        with special emphasis on the Arctic.
-        </span>
+        {% if LANGUAGE_CODE == 'de' %}
+            <span>
+            TB Geocon, eine geologische Beratungsfirma</br>
+            mit Fokus auf Rohstoffeerkundung & Bergbau</br>
+            mit Erfahrung in Polarexpeditionen</br>
+            insbesondere in der Arktis.
+            </span>
+        {% else %}    
+            <span>
+            TB Geocon, a geological consultancy</br>
+            focussed on the mineral exploration & mining sector</br>
+            with experience in Polar Expeditions</br>
+            with special emphasis on the Arctic.
+            </span>
+        {% endif %}
         <div class="line"></div>
     </div>
 </div>
@@ -24,7 +34,11 @@
 <div id="about" class="about">
     <h2>{{ about.get_title_display }}</h2>
     <div class="about-content">
-        <div>{{ about.text | convert_markdown | safe }}</div>
+        {% if LANGUAGE_CODE == 'de' and about.text_de %}
+            <div>{{ about.text_de | convert_markdown | safe }}</div>
+        {% else %}    
+            <div>{{ about.text | convert_markdown | safe }}</div>
+        {% endif %}
         {% if about.img %}
         <img src="{{ about.img.url }}" alt="{{ about.img_alt }}">
         {% endif %}
@@ -46,12 +60,20 @@
 
 <div class="services">
     {% for section in sections %}
-        <section id="section_{{ section.title }}" class="section">
+        {% if LANGUAGE_CODE == 'de' and section.title_de %}
+            <section id="section_{{ section.title_de }}" class="section">
+        {% else %}    
+            <section id="section_{{ section.title }}" class="section">
+        {% endif %}
             <div class="section-content">
                 {% if section.img %}
                 <img src="{{ section.img.url }}" alt="{{ section.img_alt }}">
                 {% endif %}
+                {% if LANGUAGE_CODE == 'de' and section.text_de %}
+                <p class="service-intro-text">{{section.text_de | convert_markdown | safe}}</p>
+                {% else %}    
                 <p class="service-intro-text">{{section.text | convert_markdown | safe}}</p>
+                {% endif %}
             </div>
             <div class="logos">
                 {% if section.logos %}
@@ -64,8 +86,16 @@
             <div class="clip-container-right-arrow">
                 <img class="clipping-box-right-arrow" src="{{sub_section.img.url}}" alt="{{sub_section.img_alt}}">
                 <div class="clip-container-text">
-                    <h4>{{ sub_section.title }}</h4>
-                    <span>{{ sub_section.text | convert_markdown | safe }}</span>
+                    {% if LANGUAGE_CODE == 'de' and section.title_de %}
+                        <h4>{{ sub_section.title_de }}</h4>
+                    {% else %}    
+                        <h4>{{ sub_section.title }}</h4>
+                    {% endif %}
+                    {% if LANGUAGE_CODE == 'de' and sub_section.text_de %}
+                        <span>{{ sub_section.text_de | convert_markdown | safe }}</span>
+                    {% else %}    
+                        <span>{{ sub_section.text | convert_markdown | safe }}</span>
+                     {% endif %}
                 </div>
             </div>    
             {% endfor %}
@@ -77,7 +107,12 @@
 <div class="services_mobile">
     {% for section in sections %}
         <section class="section_mobile">
-            <h2>{{section.get_title_display}}</h2>
+            {% if LANGUAGE_CODE == 'de' and section.title_de %}
+                <h2>{{section.get_title_de_display}}</h2>
+            {% else %}    
+                <h2>{{section.get_title_display}}</h2>
+            {% endif %}
+            
             <div class="section-content">
                 {% if section.img %}
                 <img src="{{ section.img.url }}" alt="{{ section.img_alt }}">
@@ -95,7 +130,11 @@
             <div class="clip-container-right-arrow">
                 <div class="img_and_title">
                     <img class="clipping-box-right-arrow" src="{{sub_section.img.url}}" alt="{{sub_section.img_alt}}">
-                    <h4>{{ sub_section.title }}</h4>
+                    {% if LANGUAGE_CODE == 'de' and section.title_de %}
+                        <h4>{{ sub_section.title_de }}</h4>
+                    {% else %}    
+                        <h4>{{ sub_section.title }}</h4>
+                    {% endif %}
                 </div>
                 {% if LANGUAGE_CODE == 'de' and sub_section.text_de %}
                     <span>{{ sub_section.text_de | convert_markdown | safe }}</span>
@@ -148,7 +187,11 @@
                 </div>
                 <div class="contact-info-text">
                     <p>
-                        <span>Address:</span></br>Wasserhaus 86, 4142 Münchenstein, Switzerland
+                        {% if LANGUAGE_CODE == 'de' %}
+                            <span>Adresse:</span></br>Wasserhaus 86, 4142 Münchenstein, Schweiz
+                        {% else %}    
+                            <span>Address:</span></br>Wasserhaus 86, 4142 Münchenstein, Switzerland
+                        {% endif %}
                     </p>
                 </div>
             </div>
@@ -158,7 +201,11 @@
                 </div>
                 <div class="contact-info-text">
                     <p>
-                        <span>Phone:</span></br><a href="tel://+41794684171">+41 79 468 41 71</a>
+                        {% if LANGUAGE_CODE == 'de' %}
+                            <span>Telefon:</span></br><a href="tel://+41794684171">+41 79 468 41 71</a>
+                        {% else %}    
+                            <span>Phone:</span></br><a href="tel://+41794684171">+41 79 468 41 71</a>
+                        {% endif %}
                     </p>
                 </div>
             </div>
@@ -168,7 +215,11 @@
                 </div>
                 <div class="contact-info-text">
                     <p>
-                        <span>Email:</span></br><a href="mailto://info@tbgeocon.com">info@tbgeocon.com</a>
+                        {% if LANGUAGE_CODE == 'de' %}
+                            <span>E-Mail:</span></br><a href="mailto://info@tbgeocon.com">info@tbgeocon.com</a>
+                        {% else %}    
+                            <span>Email:</span></br><a href="mailto://info@tbgeocon.com">info@tbgeocon.com</a>
+                        {% endif %}
                     </p>
                 </div>
             </div>
