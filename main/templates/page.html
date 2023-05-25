@@ -63,12 +63,21 @@
 
         <nav>
             <ul onclick="toggleNavbar()" id="nav" class="nav">
-                <li><a href="#about">About</a></li>
-                <li onclick="openTap('mining')"><a href="#services">Geology & Mining</a></li>
-                <li onclick="openTap('polar')"><a href="#services">Polar Expeditions</a></li>
-                <li onclick="openTap('photo')"><a href="#services">Photography</a></li>
-                <li onclick="openTap('translations')"><a href="#projects">Translations</a></li>
-                <li><a href="#contact">Contact</a></li>
+                {% if LANGUAGE_CODE == 'de' %}
+                    <li><a href="#about">Über mich</a></li>
+                    <li onclick="openTap('mining')"><a href="#services">Geologie & Bergbau</a></li>
+                    <li onclick="openTap('polar')"><a href="#services">Polarexpeditionen</a></li>
+                    <li onclick="openTap('photo')"><a href="#services">Photographie</a></li>
+                    <li onclick="openTap('translations')"><a href="#projects">Übersetzungen</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                {% else %}    
+                    <li><a href="#about">About</a></li>
+                    <li onclick="openTap('mining')"><a href="#services">Geology & Mining</a></li>
+                    <li onclick="openTap('polar')"><a href="#services">Polar Expeditions</a></li>
+                    <li onclick="openTap('photo')"><a href="#services">Photography</a></li>
+                    <li onclick="openTap('translations')"><a href="#projects">Translations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                {% endif %}
             </ul>
             <div id="navbar-btn" onclick="toggleNavbar()" href="#">
                 <div id="btn-icon" class=""></div>
@@ -114,8 +123,13 @@
 
         <div class="footer-container">
             <ul class="footer-container-left">
-                <li onclick="openPopup('impressum')" class="footer-element">Impressum</li>
-                <li onclick="openPopup('dataprotection')" class="footer-element">Data Protection</li>
+                {% if LANGUAGE_CODE == 'de' %}
+                    <li onclick="openPopup('impressum')" class="footer-element">Impressum</li>
+                    <li onclick="openPopup('dataprotection')" class="footer-element">Datenschutz</li>
+                {% else %}    
+                    <li onclick="openPopup('impressum')" class="footer-element">Impressum</li>
+                    <li onclick="openPopup('dataprotection')" class="footer-element">Data Protection</li>
+                {% endif %}
             </ul>
 
             <div class="footer-container-right">
@@ -126,7 +140,11 @@
         </div>
 
         <div class="footer-bottom">
-            &#64; TB Geocon 2023 - All rights reserved
+            {% if LANGUAGE_CODE == 'de' %}
+                &#64; TB Geocon 2023 - Alle Rechte vorbehalten
+            {% else %}    
+                &#64; TB Geocon 2023 - All rights reserved
+            {% endif %}
         </div>
 
 </footer>

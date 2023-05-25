@@ -7,8 +7,8 @@ Severin: Contact form submitted --> erledigt
          Subsection Titel für deutsche Version --> erledigt
          Website bleibt beim Sprache umstellen wo sie ist und springt nicht hoch auf Start
 
-Toby: -Logo Nama (rand)
-      - Übersetzungen -> in Arbeit
+Toby: -Logo Nama (rand) -> erledigt
+      - Übersetzungen -> erledigt
       - Text Sruface mapping -> erledigt
       - Link photography -> erledigt, aber gibt noch Formatierungsprobleme        
 

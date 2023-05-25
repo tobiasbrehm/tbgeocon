@@ -59,12 +59,8 @@
 
 
 <div class="services">
-    {% for section in sections %}
-        {% if LANGUAGE_CODE == 'de' and section.title_de %}
-            <section id="section_{{ section.title_de }}" class="section">
-        {% else %}    
+    {% for section in sections %}  
             <section id="section_{{ section.title }}" class="section">
-        {% endif %}
             <div class="section-content">
                 {% if section.img %}
                 <img src="{{ section.img.url }}" alt="{{ section.img_alt }}">
