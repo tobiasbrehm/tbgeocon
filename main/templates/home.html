@@ -50,7 +50,11 @@
 <div id="services" class="tabs">
     <div class="tabs-ul">
         {% for section in sections %}
-            <button class="tab" id="{{ section.title }}" onclick="openTap('{{ section.title }}')">{{section.get_title_display}}</button>
+            {% if LANGUAGE_CODE == 'de' and section.title_de  %}
+                <button class="tab" id="{{ section.title }}" onclick="openTap('{{ section.title }}')">{{section.title_de}}</button>
+            {% else %}  
+                <button class="tab" id="{{ section.title }}" onclick="openTap('{{ section.title }}')">{{section.get_title_display}}</button>
+            {% endif %}
         {% endfor %}
     </div> 
     <div id="slider" class="slider"><div class="indicator left-50"></div></div>   
@@ -60,11 +64,7 @@
 
 <div class="services">
     {% for section in sections %}
-        {% if LANGUAGE_CODE == 'de' and section.title_de %}
-            <section id="section_{{ section.title_de }}" class="section">
-        {% else %}    
             <section id="section_{{ section.title }}" class="section">
-        {% endif %}
             <div class="section-content">
                 {% if section.img %}
                 <img src="{{ section.img.url }}" alt="{{ section.img_alt }}">
@@ -95,7 +95,7 @@
                         <span>{{ sub_section.text_de | convert_markdown | safe }}</span>
                     {% else %}    
                         <span>{{ sub_section.text | convert_markdown | safe }}</span>
-                     {% endif %}
+                    {% endif %}
                 </div>
             </div>    
             {% endfor %}

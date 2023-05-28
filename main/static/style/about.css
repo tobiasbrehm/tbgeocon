@@ -33,3 +33,21 @@
         float: unset;
     }
 }
+
+@media (max-width: 760px){
+    .about img{
+        object-position: 0 -100px;
+    }
+}
+
+@media (max-width: 550px){
+    .about img{
+        object-position: 0 -50px;
+    }
+}
+
+@media (max-width: 350px){
+    .about img{
+        object-position: -50px -50px;
+    }
+}
