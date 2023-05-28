@@ -15,7 +15,7 @@ import os
 import json
 
 #
-with open('config.json') as config_file:
+with open('/etc/config.json') as config_file:
     config = json.load(config_file)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,9 +29,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1', '192.168.0.44']
+ALLOWED_HOSTS = ['195.20.241.28', 'ecb613e.online-server.cloud', 'tbgeocon.com']
 
 
 # Application definition
@@ -179,8 +179,5 @@ JAZZMIN_UI_TWEAKS = {
 # Recaptcha
 RECAPTCHA_PUBLIC_KEY = '6LfRCy8mAAAAAJPesMMSEujcb7hY9OphZ6JKBKM8'
 RECAPTCHA_PRIVATE_KEY = config['RECAPTCHA_PRIVATE_KEY']
-RECAPTCHA_REQUIRED_SCORE = 0
+RECAPTCHA_REQUIRED_SCORE = 0.85
 
-
-# only for development, delete befor deploying
-SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
