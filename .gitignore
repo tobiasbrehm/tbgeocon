@@ -6,6 +6,4 @@ venv/
 !requirements.txt
 __pycache__/
 *.py[cod]
-tbgeocon/wsgi.py
-
-tbgeocon/settings.py
+*.py
