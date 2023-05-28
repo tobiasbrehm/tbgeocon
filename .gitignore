@@ -1,8 +1,11 @@
+
 config.json
 venv/
 /venv
 *.txt
 !requirements.txt
-!programmierprobleme.txt
 __pycache__/
 *.py[cod]
+settings.py
+wsgi.py
+

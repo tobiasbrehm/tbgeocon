@@ -1,6 +1,8 @@
 /* --- Service Tabs - START --- */
 .services{
     padding: 0% 7% 3% 7%;
+    display: flex;
+    gap: 10px;
 }
 
 .service-intro-text {
@@ -183,12 +185,14 @@
     margin-top: 7px;
     gap: 30px;
     background-color: rgb(250, 250, 250);
+    box-sizing: border-box;
 }
 
 .clip-container-text{
     display: flex;
     flex-direction: column;
     padding-right: 30px;
+    height: 100%;
 }
 
 .clip-container-text h4 {
@@ -199,6 +203,7 @@
 .clip-container-right-arrow img {
     width: 100%;
     height: 100%;
+    max-height: 200px;
     object-fit: cover;
 }
 
