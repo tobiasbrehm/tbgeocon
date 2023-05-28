@@ -1,4 +1,4 @@
-#!/Users/tobiasbrehm/Sites/TBGeocon/2023Django/venv/bin/python3.11
+#!/home/webmaster/tbgeocon/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
