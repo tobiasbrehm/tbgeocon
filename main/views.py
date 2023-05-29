@@ -31,7 +31,6 @@ def home (request):
 
         if form.is_valid() or form_de.is_valid():
             cd = form.cleaned_data
-            con = get_connection(settings.EMAIL_BACKEND)
             subject, from_email, to = 'TB Geocon Kontaktformular Nachricht', settings.EMAIL_HOST_USER, 'info@tbgeocon.com'
             html_content = render_to_string('email.html', {'salutation':cd['salutation'], 'prename': cd['prename'], 'name': cd['name'], 'email':cd['email'], 'message':cd['message']})
             text_content = render_to_string('email.txt', {'salutation':cd['salutation'], 'prename': cd['prename'], 'name': cd['name'], 'email':cd['email'], 'message':cd['message']})

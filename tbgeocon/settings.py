@@ -141,7 +141,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email settings
 DEFAULT_FROM_EMAIL = 'Kontakt <contact@tbgeocon.com>'  # Name unter dem die E-Mail verschickt wird und die dazugehörige E-Mail-Adresse
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # SMTP-Backend
-EMAIL_HOST = 'smpt.ionos.de'
+EMAIL_HOST = 'smtp.ionos.de'
 EMAIL_PORT = 587 # oder 587 oder was immer der Port deines E-Mail-Providers ist
 EMAIL_USE_TLS = True  # Verbindung benutzt TLS-Verschlüsselung
 EMAIL_HOST_USER = config['EMAIL_HOST_USER']
