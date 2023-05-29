@@ -28,11 +28,11 @@
     <!-- social media -->
     <meta property="og:title" content="TB Geocon - geological consulting"/>
     <meta property="og:description" content="TB Geocon - geological consulting"/>
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content="http://tbgeocon.com/media/public/logo.png"/>
     <meta property="twitter:title" content="TB Geocon - geological consulting"/>
     <meta property="twitter:description" content="TB Geocon - geological consulting"/>
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:image" content=""/>
+    <meta property="twitter:image" content="http://tbgeocon.com/media/public/logo.png"/>
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../../media/public/favicon/apple-touch-icon.png">
@@ -62,15 +62,26 @@
         </form>
 
         <nav>
+            {% if LANGUAGE_CODE == 'de' %}
+            <ul onclick="toggleNavbar()" id="nav" class="nav">
+                <li><a href="#about">Über mich</a></li>
+                <li onclick="openTap('mining')"><a href="#services">Bergbau & Geologiie</a></li>
+                <li onclick="openTap('polar')"><a href="#services">Polarexpeditionen</a></li>
+                <li onclick="openTap('photo')"><a href="#services">Photographie</a></li>
+                <li onclick="openTap('translations')"><a href="#services">Übersetzungen</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            {% else %}
             <ul onclick="toggleNavbar()" id="nav" class="nav">
                 <li><a href="#about">About</a></li>
                 <li onclick="openTap('mining')"><a href="#services">Geology & Mining</a></li>
                 <li onclick="openTap('polar')"><a href="#services">Polar Expeditions</a></li>
                 <li onclick="openTap('photo')"><a href="#services">Photography</a></li>
-                <li onclick="openTap('translations')"><a href="#projects">Translations</a></li>
+                <li onclick="openTap('translations')"><a href="#services">Translations</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div id="navbar-btn" onclick="toggleNavbar()" href="#">
+            {% endif %}
+            <div id="navbar-btn" onclick="toggleNavbar()">
                 <div id="btn-icon" class=""></div>
             </div>
         </nav>

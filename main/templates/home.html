@@ -32,7 +32,11 @@
 
 <!-- ABOUT SECTION - START -->
 <div id="about" class="about">
-    <h2>{{ about.get_title_display }}</h2>
+    {% if LANGUAGE_CODE == 'de' and about.title_de %}
+        <h2>{{ about.title_de }}</h2>
+    {% else %}  
+        <h2>{{ about.get_title_display }}</h2>
+    {% endif %}
     <div class="about-content">
         {% if LANGUAGE_CODE == 'de' and about.text_de %}
             <div>{{ about.text_de | convert_markdown | safe }}</div>
@@ -50,7 +54,11 @@
 <div id="services" class="tabs">
     <div class="tabs-ul">
         {% for section in sections %}
-            <button class="tab" id="{{ section.title }}" onclick="openTap('{{ section.title }}')">{{section.get_title_display}}</button>
+            {% if LANGUAGE_CODE == 'de' and section.title_de %}
+                <button class="tab" id="{{ section.title }}" onclick="openTap('{{ section.title }}')">{{section.title_de}}</button>
+            {% else %}  
+                <button class="tab" id="{{ section.title }}" onclick="openTap('{{ section.title }}')">{{section.get_title_display}}</button>
+            {% endif %}
         {% endfor %}
     </div> 
     <div id="slider" class="slider"><div class="indicator left-50"></div></div>   
