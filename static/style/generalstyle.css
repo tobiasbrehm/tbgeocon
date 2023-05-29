@@ -156,7 +156,7 @@ h2 {
     font-size: 0.8em;
   }
   
-  @media screen and (max-width: 700px){
+  @media (max-width: 700px){
 
     div#popup-impressum.popup, div#popup-dataprotection.popup {
       width: 70%;
@@ -164,6 +164,18 @@ h2 {
 
     .hero-content{
       font-size: 1.2em;
+    }
+  }
+
+  @media (max-width: 450px){
+    .hero-content{
+      font-size: 1em;
+    }
+  }
+
+  @media (max-width: 350px){
+    .hero-content{
+      font-size: 0.8em;
     }
   }
 

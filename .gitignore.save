@@ -1,0 +1,10 @@
+config.json
+venv/
+<<<<<<< HEAD
+/venv
+=======
+requirements.txt
+__pycache__/
+*.py[cod]
+
+
