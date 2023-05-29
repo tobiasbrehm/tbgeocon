@@ -7,4 +7,4 @@ venv/
 __pycache__/
 *.py[cod]
 *.py
-tbgeocon/
+tbgeocon/settings.py
