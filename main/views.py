@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Section
 from django.http import HttpResponseRedirect
 from django.core.mail import EmailMultiAlternatives
-from django.core.mail import get_connection
+from django.core.mail import get_connection, send_mail
 from django.template.loader import render_to_string
 from django. conf import settings
 from .forms import ContactForm, ContactForm_de

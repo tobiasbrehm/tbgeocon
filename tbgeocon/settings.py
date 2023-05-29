@@ -29,10 +29,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['195.20.241.28', 'ecb613e.online-server.cloud', 'tbgeocon.com']
-
+CSRF_TRUSTED_ORIGINS=['https://tbgeocon.com', '195.20.241.28']
 
 # Application definition
 
@@ -140,7 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email settings
 DEFAULT_FROM_EMAIL = 'Kontakt <contact@tbgeocon.com>'  # Name unter dem die E-Mail verschickt wird und die dazugehörige E-Mail-Adresse
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'#django.core.mail.backends.smtp.EmailBackend'  # SMTP-Backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # SMTP-Backend
 EMAIL_HOST = 'smpt.ionos.de'
 EMAIL_PORT = 587 # oder 587 oder was immer der Port deines E-Mail-Providers ist
 EMAIL_USE_TLS = True  # Verbindung benutzt TLS-Verschlüsselung
