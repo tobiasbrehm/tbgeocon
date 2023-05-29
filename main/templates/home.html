@@ -13,14 +13,14 @@
         {% if LANGUAGE_CODE == 'de' %}
             <span>
             TB Geocon, eine geologische Beratungsfirma</br>
-            mit Fokus auf Rohstoffeerkundung & Bergbau</br>
+            mit Fokus auf Rohstofferkundung & Bergbau</br>
             mit Erfahrung in Polarexpeditionen</br>
             insbesondere in der Arktis.
             </span>
         {% else %}    
             <span>
             TB Geocon, a geological consultancy</br>
-            focussed on the mineral exploration & mining sector</br>
+            focussed on mineral exploration & mining sector</br>
             with experience in Polar Expeditions</br>
             with special emphasis on the Arctic.
             </span>
@@ -74,9 +74,9 @@
                 <img src="{{ section.img.url }}" alt="{{ section.img_alt }}">
                 {% endif %}
                 {% if LANGUAGE_CODE == 'de' and section.text_de %}
-                <p class="service-intro-text">{{section.text_de | convert_markdown | safe}}</p>
+                <div class="service-intro-text">{{section.text_de | convert_markdown | safe}}</div>
                 {% else %}    
-                <p class="service-intro-text">{{section.text | convert_markdown | safe}}</p>
+                <div class="service-intro-text">{{section.text | convert_markdown | safe}}</div>
                 {% endif %}
             </div>
             <div class="logos">

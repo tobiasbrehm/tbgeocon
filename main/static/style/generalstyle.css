@@ -125,8 +125,9 @@ h2 {
     border-radius: 5px;
     position: relative;
     transition: all 5s ease-in-out;
-    min-height: calc(100% - 40px);
+    min-height: calc(100vh - 120px);
     box-sizing: border-box;
+    overflow-y: auto;
   }
   
   .popup h2 {

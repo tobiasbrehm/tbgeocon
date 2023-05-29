@@ -100,7 +100,11 @@
             <h2>{{impressum.get_title_display}}</h2>
             <div onclick="closePopup()" class="close">&times;</div>
             <div class="content">
-             {{ impressum.text | convert_markdown | safe }}
+                {% if LANGUAGE_CODE == 'de' and impressum.text_de %}
+                    {{ impressum.text_de | convert_markdown | safe }}
+                {% else %}
+                    {{ impressum.text | convert_markdown | safe }}
+                {% endif %}
             </div>
         </div>
     </div>
@@ -110,7 +114,11 @@
             <h2>{{legal.get_title_display}}</h2>
             <div onclick="closePopup()" class="close">&times;</div>
             <div class="content">
-             {{ legal.text | convert_markdown | safe }}
+                {% if LANGUAGE_CODE == 'de' and legal.text_de %}
+                    {{ legal.text_de | convert_markdown | safe }}
+                {% else %}
+                    {{ legal.text | convert_markdown | safe }}
+                {% endif %}
             </div>
         </div>
     </div>
@@ -124,11 +132,17 @@
 <footer>
 
         <div class="footer-container">
-            <ul class="footer-container-left">
-                <li onclick="openPopup('impressum')" class="footer-element">Impressum</li>
-                <li onclick="openPopup('dataprotection')" class="footer-element">Data Protection</li>
-            </ul>
-
+            {% if LANGUAGE_CODE == 'de' %}
+                <ul class="footer-container-left">
+                    <li onclick="openPopup('impressum')" class="footer-element">Impressum</li>
+                    <li onclick="openPopup('dataprotection')" class="footer-element">Datenschutzerklärung</li>
+                </ul>
+            {% else %}
+                <ul class="footer-container-left">
+                    <li onclick="openPopup('impressum')" class="footer-element">Impressum</li>
+                    <li onclick="openPopup('dataprotection')" class="footer-element">Data Protection</li>
+                </ul>
+            {% endif %}
             <div class="footer-container-right">
                 <!--<div class="slogan">Geology is a Lifestyle</div>-->
                 <a href="https://www.linkedin.com/in/tobiasbrehm/" target="_blank"><img src="../../media/public/in.svg" alt="Link to LinkedIn"></a>
@@ -137,7 +151,11 @@
         </div>
 
         <div class="footer-bottom">
-            &#64; TB Geocon 2023 - All rights reserved
+            {% if LANGUAGE_CODE == 'de' %}
+                &#64; TB Geocon 2023 - Alle Rechte vorbehalten
+            {% else %}
+                &#64; TB Geocon 2023 - All rights reserved
+            {% endif %}
         </div>
 
 </footer>

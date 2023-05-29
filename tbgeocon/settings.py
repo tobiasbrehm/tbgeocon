@@ -32,7 +32,7 @@ SECRET_KEY = config['SECRET_KEY']
 DEBUG = True
 
 ALLOWED_HOSTS = ['195.20.241.28', 'ecb613e.online-server.cloud', 'tbgeocon.com']
-CSRF_TRUSTED_ORIGINS=['https://tbgeocon.com', '195.20.241.28']
+CSRF_TRUSTED_ORIGINS=['https://tbgeocon.com', 'https://195.20.241.28']
 
 # Application definition
 
