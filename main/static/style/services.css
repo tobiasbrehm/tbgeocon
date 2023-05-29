@@ -293,7 +293,7 @@
     }
 
     .clipping-box-right-arrow{
-        max-width: 40% !important;
+        max-width: 40%;
         object-fit: cover;
     }
 
@@ -341,5 +341,33 @@
         width: 100%;
         max-height: unset;
         height: 300px;
+    }
+}
+
+@media (max-width: 425px){
+    .img_and_title{
+        font-size: 1.0em;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 360px){
+    .img_and_title{
+        flex-direction: column;
+        align-items: start;
+        text-align: center;
+        width: 100%;
+    }
+
+    .img_and_title h4{
+        width: 100%;
+    }
+
+    .clipping-box-right-arrow{
+        max-width: 60%;
+    }
+
+    .img_and_title img{
+        width: 80%;
     }
 }
