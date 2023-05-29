@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['195.20.241.28', 'ecb613e.online-server.cloud', 'tbgeocon.com']
 CSRF_TRUSTED_ORIGINS=['https://tbgeocon.com', 'https://195.20.241.28']

@@ -112,7 +112,7 @@
     {% for section in sections %}
         <section class="section_mobile">
             {% if LANGUAGE_CODE == 'de' and section.title_de %}
-                <h2>{{section.get_title_de_display}}</h2>
+                <h2>{{section.title_de}}</h2>
             {% else %}    
                 <h2>{{section.get_title_display}}</h2>
             {% endif %}
@@ -121,7 +121,11 @@
                 {% if section.img %}
                 <img src="{{ section.img.url }}" alt="{{ section.img_alt }}">
                 {% endif %}
-                <span class="service-intro-text">{{section.text | convert_markdown | safe}}</span>
+                {% if LANGUAGE_CODE == 'de' and section.text_de %}
+                    <span class="service-intro-text">{{section.text_de | convert_markdown | safe}}</span>
+                {% else %}  
+                    <span class="service-intro-text">{{section.text | convert_markdown | safe}}</span>
+                {% endif %} 
             </div>
             <div class="logos">
                 {% if section.logos %}
