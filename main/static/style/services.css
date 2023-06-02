@@ -264,12 +264,20 @@
 }
 
 @media (max-width: 850px){
-    .tabs{
+    .tabs-ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        align-items: flex-start;
+        padding-left: 3%;
+    }
+
+    .slider-one, .slider-two, .slider-three, .slider-four{
         display: none;
     }
 
-    .services{
-        display: none;
+    .clip-container-text h4{
+        padding-left: 2%;
     }
 
     .clip-container-right-arrow{
